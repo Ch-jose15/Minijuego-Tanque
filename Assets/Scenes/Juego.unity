@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &395952532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5727883628802129172, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+  m_PrefabInstance: {fileID: 7075846477652329833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &408793238
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +264,30 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &537814916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4327001074502308505, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+  m_PrefabInstance: {fileID: 7075846477652329833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &537814919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537814916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ec2160156a38645a68921eadc2242a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyMoveForward: 273
+  keyMoveReverse: 274
+  keyRotateLeft: 276
+  keyRotateRight: 275
+  keyTurretLeft: 307
+  keyTurretRight: 305
+  keyFire: 13
 --- !u!1001 &3631810518388979930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -425,11 +454,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanque 04
       objectReference: {fileID: 0}
+    - target: {fileID: 8113539227808212256, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113539227808212256, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+      propertyPath: turretTransform
+      value: 
+      objectReference: {fileID: 395952532}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4327001074502308505, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 537814919}
   m_SourcePrefab: {fileID: 100100000, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+--- !u!114 &7075846477652329834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 258235344739140640, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+  m_PrefabInstance: {fileID: 7075846477652329833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558b9d57e27465b41913076f72a680e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7075846477652329835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 739040213045898797, guid: 090b3fd0ca3309c45b9e406a29d6e64c, type: 3}
+  m_PrefabInstance: {fileID: 7075846477652329833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558b9d57e27465b41913076f72a680e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7499514741854906208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -539,11 +601,127 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanque 05
       objectReference: {fileID: 0}
+    - target: {fileID: 3109139449160193318, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109139449160193318, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109139449160193318, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109139449160193318, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3109139449160193318, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2244219154581756671, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8950443518363027890}
+    - targetCorrespondingSourceObject: {fileID: 2244219154581756671, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8950443518363027889}
+    - targetCorrespondingSourceObject: {fileID: 2244219154581756671, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8950443518363027894}
   m_SourcePrefab: {fileID: 100100000, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+--- !u!1 &8950443518363027887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2244219154581756671, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+  m_PrefabInstance: {fileID: 8950443518363027886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8950443518363027888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4624317276491972594, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+  m_PrefabInstance: {fileID: 8950443518363027886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8950443518363027889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950443518363027887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d092992b48a15a64faca539e0340cde1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pistaLeft: {fileID: 7075846477652329835}
+  pistaRight: {fileID: 7075846477652329834}
+  turretTransform: {fileID: 8950443518363027888}
+  moveAceleration: 0.1
+  moveDeceleration: 0.2
+  moveSpeedMax: 2.5
+  rotateAceleration: 4
+  rotateDeceleration: 10
+  rotateSpeedMax: 130
+  turretRotateSpeed: 180
+--- !u!114 &8950443518363027890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950443518363027887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ec2160156a38645a68921eadc2242a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyMoveForward: 119
+  keyMoveReverse: 115
+  keyRotateLeft: 97
+  keyRotateRight: 100
+  keyTurretLeft: 101
+  keyTurretRight: 113
+  keyFire: 32
+--- !u!4 &8950443518363027891 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3109139449160193318, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+  m_PrefabInstance: {fileID: 8950443518363027886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8950443518363027892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6269505170174203562, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+  m_PrefabInstance: {fileID: 8950443518363027886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8950443518363027893 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9098723583028184323, guid: 8da1c547f7a62754aa3861f1668f7d76, type: 3}
+  m_PrefabInstance: {fileID: 8950443518363027886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8950443518363027894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8950443518363027887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b245a7f1aac46f47802e89b62fa23b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tanqueController: {fileID: 8950443518363027889}
+  turretTransform: {fileID: 8950443518363027888}
+  projectilePrefab: {fileID: 1831013919885916469, guid: f970898a5cc1cde4aa7cd890ad8b3e27, type: 3}
+  gunPositions:
+  - {fileID: 8950443518363027893}
+  - {fileID: 8950443518363027892}
+  - {fileID: 8950443518363027891}
+  shootCooldown: 0.5
+  projectileSpeed: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -552,5 +730,5 @@ SceneRoots:
   - {fileID: 3631810518388979930}
   - {fileID: 7499514741854906208}
   - {fileID: 7040206224881162827}
-  - {fileID: 7075846477652329833}
   - {fileID: 8950443518363027886}
+  - {fileID: 7075846477652329833}

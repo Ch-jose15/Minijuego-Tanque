@@ -82,19 +82,70 @@ public class TanqueController : MonoBehaviour
     private void HandleRotation()
     {
         float rotationInput = inputProvider.GetRotationInput();
+
+        if (rotationInput < 0)
+        {
+            rotateSpeedLeft = Mathf.Min(rotateSpeedLeft + rotateAceleration, rotateSpeedMax);
+            rotateSpeedRight = Mathf.Max(rotateSpeedRight - rotateDeceleration, 0);
+        }
+        else if (rotationInput > 0)
+        {
+            rotateSpeedRight = Mathf.Min(rotateSpeedRight + rotateAceleration, rotateSpeedMax);
+            rotateSpeedLeft = Mathf.Max(rotateSpeedLeft - rotateDeceleration, 0);
+        }
+        else
+        {
+            rotateSpeedLeft = Mathf.Max(rotateSpeedLeft - rotateDeceleration, 0);
+            rotateSpeedRight = Mathf.Max(rotateSpeedRight - rotateDeceleration, 0);
+        }
+
+        float finalRotation = rotateSpeedLeft - rotateSpeedRight;
+        transform.Rotate(0f, 0f, finalRotation * Time.deltaTime);
     }
 
     /*-----------------------------------------------------------------------------------------*/
 
     private void HandleTurretRotation()
     {
-        
+        if (turretTransform == null) return;
+
+        float turretInput = inputProvider.GetTurretInput();
+
+        if (turretInput != 0)
+        {
+            float turretRotation = turretInput * turretRotateSpeed * Time.deltaTime;
+            turretTransform.Rotate(0f, 0f, turretRotation);
+        }
     }
 
     /*-----------------------------------------------------------------------------------------*/
 
     private void UpdateAnimations()
     {
-        
+        bool isMoving = moveSpeed > 0.01f || moveSpeedReverse > 0.01f;
+ 
+        if (pistaLeft != null && pistaLeft.animator != null) pistaLeft.animator.SetBool("isMoving", isMoving);
+        if (pistaRight != null && pistaRight.animator != null) pistaRight.animator.SetBool("isMoving", isMoving);
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    public bool GetFireInput()
+    {
+        return inputProvider != null && inputProvider.GetFireInput();
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    public void SetInputProvider(IInputProvider newInputProvider)
+    {
+        inputProvider = newInputProvider;
+    }
+
+    /*-----------------------------------------------------------------------------------------*/
+
+    public float GetCurrentSpeed()
+    {
+        return moveSpeed - moveSpeedReverse;
     }
 }
